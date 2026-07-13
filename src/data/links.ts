@@ -57,7 +57,7 @@ export const linkGroups: LinkGroup[] = [
       {
         title: "Join my Discord",
         subtitle: "Join the fun zone!",
-        url: "https://discord.gg/4QX29qMhPP",
+        url: "https://discord.gg/utC3JRp4zW",
         icon: FaDiscord,
         accent: "yellow",
         pill: true,
