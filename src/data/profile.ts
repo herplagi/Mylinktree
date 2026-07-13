@@ -1,13 +1,13 @@
 export const profile = {
   name: "Pinot",
-  username: "@pinotfound",
-  bio: "Streamer • Gamer • Lazy Content Creator",
-
-  avatar: "/avatar.png",
+  tag: "Streamer & Content Creator",
+  tagEmoji: "🎮",
+  bio: "Chaos gremlin behind the camera. Full-time gamer, part-time menace! ✨",
+  status: "ONLINE!",
 
   socials: {
-    github: "https://github.com/herplagi",
     instagram: "https://instagram.com/alvinoalbas",
-    linkedin: "https://linkedin.com/in/alvinoalbas",
+    tiktok: "https://tiktok.com/@pinotfound",
+    youtube: "https://youtu.be/QDia3e12czc?si=1b-HTq2B0-5q9eon",
   },
 };

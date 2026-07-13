@@ -1,34 +1,85 @@
 import type { IconType } from "react-icons";
 import {
-  FaDonate,
+  FaHandHoldingHeart,
+  FaCoins,
   FaDiscord,
-  FaTiktok,
-} from "react-icons/fa";
+  FaWandMagicSparkles,
+  FaEnvelope,
+} from "react-icons/fa6";
+
+export type Accent = "pink" | "cyan" | "yellow";
 
 export interface LinkItem {
   title: string;
   subtitle: string;
   url: string;
   icon: IconType;
+  accent: Accent;
+  /** Fully rounded "pill" shape instead of the default rounded-card shape */
+  pill?: boolean;
+  external?: boolean;
 }
 
-export const links: LinkItem[] = [
+export interface LinkGroup {
+  label: string;
+  emoji: string;
+  accent: Accent;
+  links: LinkItem[];
+}
+
+export const linkGroups: LinkGroup[] = [
   {
-    title: "Saweria",
-    subtitle: "Bantu donate streamer kecil ini hehe ❤️",
-    url: "https://saweria.co/pinokiowo",
-    icon: FaDonate,
+    label: "Support the Chaos",
+    emoji: "🎉",
+    accent: "pink",
+    links: [
+      {
+        title: "Support me on Saweria",
+        subtitle: "Bantu donate streamer kecil ini hehe ❤️",
+        url: "https://saweria.co/pinokiowo",
+        icon: FaHandHoldingHeart,
+        accent: "pink",
+      },
+      {
+        title: "Tip me on Socialbuzz",
+        subtitle: "Tips & commissions",
+        url: "https://sociabuzz.com/pinokiowo",
+        icon: FaCoins,
+        accent: "cyan",
+      },
+    ],
   },
   {
-    title: "Discord",
-    subtitle: "Join komunitas Discord",
-    url: "https://discord.gg/4QX29qMhPP",
-    icon: FaDiscord,
+    label: "Join the Cult",
+    emoji: "💖",
+    accent: "cyan",
+    links: [
+      {
+        title: "Join my Discord",
+        subtitle: "Join the fun zone!",
+        url: "https://discord.gg/4QX29qMhPP",
+        icon: FaDiscord,
+        accent: "yellow",
+        pill: true,
+        external: true,
+      },
+    ],
+  },
+];
+
+export const secondaryLinks: LinkItem[] = [
+  {
+    title: "Cool Stuff",
+    subtitle: "Project Aurora",
+    url: "#",
+    icon: FaWandMagicSparkles,
+    accent: "pink",
   },
   {
-    title: "TikTok",
-    subtitle: "Follow me on TikTok",
-    url: "https://tiktok.com/@pinotfound",
-    icon: FaTiktok,
+    title: "Say Hi!",
+    subtitle: "Get in touch",
+    url: "mailto:hello@pinotfound.com",
+    icon: FaEnvelope,
+    accent: "yellow",
   },
 ];
